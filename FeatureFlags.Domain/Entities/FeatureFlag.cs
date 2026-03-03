@@ -11,7 +11,9 @@
         private readonly Dictionary<string, bool> _regionOverrides = new();
         public FeatureFlag(string name, bool defaultState, string? description = null)
         {
-            Id = Guid.NewGuid(); Name = name; DefaultState = defaultState; Description = description;
+            Id = Guid.NewGuid(); Name = name; 
+            DefaultState = defaultState; 
+            Description = description;
         }
         public bool Evaluate(string? userId = null, string? groupId = null, string? region = null)
         {
